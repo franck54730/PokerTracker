@@ -7,6 +7,8 @@ public class Joueur {
 	private String nom;
 	
 	private Historique historique;
+	
+	private Statistique statistique;
 
 	public Joueur(String nom) {
 		super();
@@ -28,6 +30,14 @@ public class Joueur {
 
 	public void setHistorique(Historique historique) {
 		this.historique = historique;
+	}
+
+	public Statistique getStatistique() {
+		return statistique;
+	}
+
+	public void setStatistique(Statistique statistique) {
+		this.statistique = statistique;
 	}
 	
 	
