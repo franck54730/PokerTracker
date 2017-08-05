@@ -8,8 +8,7 @@ public class CallTurn extends TurnAction implements Call{
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
-		
+		getAuteur().getStatistique().incNbCall();
 	}
 
 }

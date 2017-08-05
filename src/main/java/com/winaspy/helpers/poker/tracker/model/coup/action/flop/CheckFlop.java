@@ -8,8 +8,9 @@ public class CheckFlop extends FlopAction implements Check {
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
-		
+		if(c.estAggresseur(getAuteur()) && !c.quelquunAParler()) {
+			getAuteur().getStatistique().incNbOpportuniteCBet();
+		}
 	}
 
 }

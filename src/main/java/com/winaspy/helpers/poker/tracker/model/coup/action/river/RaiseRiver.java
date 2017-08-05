@@ -8,8 +8,7 @@ public class RaiseRiver extends RiverAction implements Raise{
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
-		
+		getAuteur().getStatistique().incNbRaise();
 	}
 
 }

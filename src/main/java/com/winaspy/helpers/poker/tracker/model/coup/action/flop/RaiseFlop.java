@@ -8,8 +8,19 @@ public class RaiseFlop extends FlopAction implements Raise {
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
+		getAuteur().getStatistique().incNbRaise();
 		
+
+		
+
+		if(c.isCbet()) {
+			getAuteur().getStatistique().incNbRaiseToCBet();
+		}
+		
+		if(c.estAggresseur(getAuteur()) && !c.quelquunAParler()) {
+			getAuteur().getStatistique().incNbCBet();
+			c.startCBet();
+		}
 	}
 
 }

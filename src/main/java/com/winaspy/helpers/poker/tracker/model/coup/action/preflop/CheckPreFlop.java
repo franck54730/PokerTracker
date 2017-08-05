@@ -9,8 +9,9 @@ public class CheckPreFlop extends PreFlopAction implements Check{
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
-		
+		if((c.estCO(getAuteur()) || c.estBTN(getAuteur())) && !c.quelquunAParler()) {
+			getAuteur().getStatistique().incNbOpportuniteVolBlindes();
+		}
 	}
 
 }

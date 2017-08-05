@@ -8,8 +8,11 @@ public class CallFlop extends FlopAction implements Call{
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
-		
+		getAuteur().getStatistique().incNbCall();
+
+		if(c.isCbet()) {
+			getAuteur().getStatistique().incNbCallToCBet();
+		}
 	}
 
 }

@@ -8,8 +8,12 @@ public class FoldFlop extends FlopAction implements Fold{
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
-		
+		if(c.estAggresseur(getAuteur()) && !c.quelquunAParler()) {
+			getAuteur().getStatistique().incNbOpportuniteCBet();
+		}
+		if(c.isCbet()) {
+			getAuteur().getStatistique().incNbFoldToCBet();
+		}
 	}
 
 }

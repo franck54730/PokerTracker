@@ -8,8 +8,7 @@ public class CallRiver extends RiverAction implements Call{
 
 	@Override
 	public void addStatistique(Contexte c) {
-		// TODO Auto-generated method stub
-		
+		getAuteur().getStatistique().incNbCall();
 	}
 
 }
